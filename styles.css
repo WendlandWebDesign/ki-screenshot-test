@@ -4,6 +4,10 @@
   --accent: #c0323d;
   --line: #e6dcc7;
   --placeholder: #d4c7ab;
+  --about-bg: #f0df9f;
+  --accent: #df8f26;
+  --button: #b62c36;
+  --text: #1e1e1e;
   --bg: #f2e197;
   --text: #111;
   --paper: #f5f5f5;
@@ -115,12 +119,123 @@ main {
 @media (max-width: 820px) {
   .reference-grid {
     grid-template-columns: 1fr;
+  font-family: Arial, Helvetica, sans-serif;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
   background: #fff;
 }
 
 .container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.leistungen {
+  padding: 3rem 0;
+}
+
+.leistungen h1 {
+  margin: 0 0 1rem;
+}
+
+.leistungen p {
+  margin: 0;
+  max-width: 65ch;
+  line-height: 1.6;
+}
+
+.about {
+  background: var(--about-bg);
+  padding: 4rem 0;
+}
+
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background: #ef9f34;
+  color: #9f1f29;
+  font-size: 0.9rem;
+  border-radius: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  margin-bottom: 0.75rem;
+}
+
+.about h2 {
+  font-size: clamp(1.8rem, 2.6vw, 2.7rem);
+  margin: 0;
+}
+
+.about p {
+  margin: 1.5rem 0;
+  line-height: 1.45;
+  max-width: 42ch;
+  font-size: 1.55rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--button);
+  color: #fff;
+  padding: 0.8rem 1.15rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.about-visual {
+  position: relative;
+  min-height: 500px;
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  color: rgba(0, 0, 0, 0.65);
+  background: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.flame-placeholder {
+  position: absolute;
+  inset: 0;
+}
+
+.people-placeholder {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 76%;
+  height: 62%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about p {
+    max-width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .about-visual {
+    min-height: 360px;
+  }
+
+  .people-placeholder {
+    width: 100%;
+    height: 45%;
   width: min(1100px, 92vw);
   margin: 0 auto;
 }
