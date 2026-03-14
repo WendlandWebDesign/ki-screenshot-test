@@ -418,3 +418,133 @@ p {
     font-size: 28px;
   }
 }
+
+.services {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 68px 48px 80px;
+  background: #efefef;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.services__bg-mark {
+  position: absolute;
+  inset: 40px 0 0;
+  margin: auto;
+  width: 100%;
+  font-size: 540px;
+  line-height: 0.8;
+  font-weight: 700;
+  color: rgba(231, 210, 169, 0.2);
+  pointer-events: none;
+  user-select: none;
+}
+
+.services__badge {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: #e8aa43;
+  color: #b63f24;
+  border-radius: 6px;
+  padding: 4px 14px;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.services__title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  color: #101010;
+}
+
+.services__title::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 12px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -9px;
+  border-bottom: 6px solid #df9d33;
+  border-radius: 50%;
+}
+
+.services__grid {
+  position: relative;
+  z-index: 1;
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 54px;
+}
+
+.service-card {
+  min-height: 86px;
+  border-radius: 10px;
+  background: #f7f7f7;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.service-card__icon {
+  width: 42px;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  border: 4px solid #f1d577;
+  color: #f1d577;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.services__actions {
+  position: relative;
+  z-index: 1;
+  margin-top: 52px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .services {
+    max-width: none;
+    padding: 30px 20px 40px;
+  }
+
+  .services__bg-mark {
+    font-size: 300px;
+    top: 120px;
+  }
+
+  .services__title {
+    font-size: 42px;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .service-card {
+    font-size: 28px;
+    min-height: 70px;
+  }
+}
