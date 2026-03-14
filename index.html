@@ -3,6 +3,215 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standort & Leistungen</title>
+    <style>
+      :root {
+        --bg: #efefef;
+        --text: #131313;
+        --accent: #ec9a3a;
+        --button: #c92a3a;
+        --button-hover: #ae2230;
+        --card: #f7f7f7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+        background: #fff;
+      }
+
+      .section {
+        padding: 72px 24px;
+      }
+
+      .standort {
+        background: #fafafa;
+        text-align: center;
+      }
+
+      .standort h2,
+      .leistungen h2 {
+        margin: 0;
+        font-size: clamp(34px, 4vw, 48px);
+      }
+
+      .standort p {
+        max-width: 700px;
+        margin: 20px auto 0;
+        line-height: 1.5;
+      }
+
+      .leistungen {
+        position: relative;
+        background: var(--bg);
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .leistungen::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse at 10% 85%, rgba(232, 220, 196, 0.4), transparent 36%),
+          radial-gradient(ellipse at 80% 25%, rgba(232, 220, 196, 0.28), transparent 40%);
+        z-index: 0;
+      }
+
+      .leistungen-wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .kicker {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 22px;
+        color: #cf2e3e;
+        background: #e7a554;
+        margin-bottom: 14px;
+      }
+
+      .angebot-title {
+        display: inline-block;
+        position: relative;
+        font-size: clamp(42px, 5vw, 64px);
+      }
+
+      .angebot-title::after {
+        content: "";
+        position: absolute;
+        left: 22%;
+        right: 22%;
+        bottom: -6px;
+        height: 6px;
+        border-radius: 99px;
+        background: var(--accent);
+      }
+
+      .list-grid {
+        margin-top: 52px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px 44px;
+      }
+
+      .list-item {
+        background: var(--card);
+        border-radius: 10px;
+        min-height: 118px;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 0 28px;
+        text-align: left;
+        font-size: clamp(24px, 2.4vw, 42px);
+        font-weight: 700;
+      }
+
+      .check {
+        width: 50px;
+        height: 50px;
+        border: 4px solid #efd479;
+        border-radius: 50%;
+        color: #efd479;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 34px;
+        flex: 0 0 50px;
+      }
+
+      .buttons {
+        margin-top: 56px;
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        padding: 14px 28px;
+        font-weight: 700;
+        font-size: 32px;
+        text-decoration: none;
+        line-height: 1;
+        border: 4px solid var(--button);
+      }
+
+      .btn-primary {
+        background: var(--button);
+        color: #fff;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--button);
+      }
+
+      .btn:hover {
+        border-color: var(--button-hover);
+      }
+
+      .btn-primary:hover {
+        background: var(--button-hover);
+      }
+
+      @media (max-width: 920px) {
+        .list-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .list-item {
+          min-height: 94px;
+          font-size: clamp(24px, 4.5vw, 34px);
+        }
+
+        .btn {
+          font-size: 24px;
+          padding: 12px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section standort" id="standort">
+      <h2>Standort</h2>
+      <p>
+        Unser Standort befindet sich zentral und ist schnell erreichbar. Direkt darunter
+        folgt jetzt die gewünschte Leistungen-Sektion.
+      </p>
+    </section>
+
+    <section class="section leistungen" id="leistungen">
+      <div class="leistungen-wrap">
+        <span class="kicker">Leistungen</span>
+        <h2 class="angebot-title">Unser Angebot</h2>
+
+        <div class="list-grid">
+          <article class="list-item"><span class="check">✓</span>Ofenhandel</article>
+          <article class="list-item"><span class="check">✓</span>Handel mit Fertigkaminen</article>
+          <article class="list-item"><span class="check">✓</span>Schornsteinplanung und -bau</article>
+          <article class="list-item"><span class="check">✓</span>Sonderanfertigungen</article>
+        </div>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#leistungen">→ Leistungen</a>
+          <a class="btn btn-secondary" href="#kontakt">→ Kontakt</a>
+        </div>
+      </div>
+    </section>
     <title>Öfen & Referenzen</title>
     <title>Ofenbau</title>
     <title>Ofenspeicher Jagow</title>
