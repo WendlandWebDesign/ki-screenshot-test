@@ -1,0 +1,132 @@
+:root {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --text: #1f1f1f;
+  --muted: #444;
+  --accent: #be2636;
+  --badge-bg: #f0a24d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+.about-us {
+  margin-bottom: 42px;
+}
+
+.about-us h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.about-us p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 700px;
+}
+
+.showroom-ovens {
+  padding: 6px 0 24px;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  color: #c62a39;
+  background: var(--badge-bg);
+  font-weight: 500;
+}
+
+.showroom-ovens h2 {
+  margin: 0 0 28px;
+  font-size: clamp(2rem, 3.3vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 38px;
+}
+
+.oven-card {
+  background: var(--surface);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.oven-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2.15;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-body h3 {
+  margin: 0 0 6px;
+  font-size: 1.95rem;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+}
+
+.card-body p {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.price {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 1.8rem;
+  font-size: clamp(1rem, 1.4vw, 1.8rem);
+  font-weight: 700;
+  box-shadow: 0 4px 0 #9c1f2d;
+}
+
+@media (max-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  main {
+    padding: 40px 16px 60px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
