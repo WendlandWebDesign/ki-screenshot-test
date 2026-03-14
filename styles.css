@@ -1,4 +1,10 @@
 :root {
+  --bg: #f2e197;
+  --text: #111;
+  --paper: #f5f5f5;
+  --accent: #d6382d;
+  --button: #b92230;
+  --border: #e2c565;
   --bg: #f5f5f5;
   --surface: #ffffff;
   --text: #1f1f1f;
@@ -16,6 +22,142 @@
 
 body {
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(180deg, #fff 0%, #fff9e8 100%);
+  text-align: center;
+}
+
+.hero__eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8f6f20;
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0.2rem 0 0.8rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.location {
+  background: var(--bg);
+  padding: 4rem 0;
+}
+
+.location__grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.location__map-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ddd;
+  min-height: 620px;
+}
+
+.location__map-wrapper iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  display: block;
+}
+
+.location__badge {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  background: #ed9f37;
+  color: #7f2604;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.location__content h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.15;
+}
+
+.location__card {
+  background: var(--paper);
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  margin-top: 1rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.location__card p {
+  margin: 0.25rem 0;
+  font-size: 1.05rem;
+}
+
+.location__card--highlight {
+  border: 4px solid var(--border);
+}
+
+.location__card--highlight span {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.location__actions {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.65rem 1.15rem;
+}
+
+.btn--primary {
+  color: #fff;
+  background: var(--button);
+}
+
+.btn--outline {
+  color: var(--button);
+  border: 2px solid var(--button);
+  background: #f7e8aa;
+}
+
+@media (max-width: 900px) {
+  .location__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .location__map-wrapper,
+  .location__map-wrapper iframe {
+    min-height: 420px;
   font-family: "Inter", "Segoe UI", sans-serif;
   color: var(--text);
   background: var(--bg);
