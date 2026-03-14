@@ -17,7 +17,7 @@ body {
 
 .hero {
   min-height: 100vh;
-  max-width: 1120px;
+  max-width: none;
   margin: 0 auto;
   background: var(--bg);
   padding: 24px 48px 32px;
@@ -253,7 +253,7 @@ p {
 }
 
 .location {
-  max-width: 1120px;
+  max-width: none;
   margin: 0 auto;
   background: #eadb96;
   padding: 56px 48px 70px;
@@ -420,7 +420,7 @@ p {
 }
 
 .services {
-  max-width: 1120px;
+  max-width: none;
   margin: 0 auto;
   padding: 68px 48px 80px;
   background: #efefef;
@@ -551,7 +551,7 @@ p {
 
 
 .stoves {
-  max-width: 1120px;
+  max-width: none;
   margin: 0 auto;
   background: #efefef;
   padding: 62px 48px 72px;
@@ -674,7 +674,7 @@ p {
 
 
 .references {
-  max-width: 1120px;
+  max-width: none;
   margin: 0 auto;
   min-height: 560px;
   background: #efe2bf;
@@ -767,7 +767,7 @@ p {
 }
 
 .about {
-  max-width: 1120px;
+  max-width: none;
   margin: 0 auto;
   background: #eadb96;
   padding: 64px 48px 0;
@@ -917,7 +917,7 @@ p {
 }
 
 .site-footer {
-  max-width: 1120px;
+  max-width: none;
   margin: 0 auto;
   background: #e5a24d;
   padding: 48px 48px 12px;
