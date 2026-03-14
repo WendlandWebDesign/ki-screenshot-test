@@ -5,6 +5,15 @@
   --accent: #d6382d;
   --button: #b92230;
   --border: #e2c565;
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --text: #1f1f1f;
+  --muted: #444;
+  --accent: #be2636;
+  --badge-bg: #f0a24d;
+  --footer-bg: #e8a64f;
+  --text: #0e0e0e;
+  --pattern: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -149,5 +158,229 @@ body {
   .location__map-wrapper,
   .location__map-wrapper iframe {
     min-height: 420px;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+.about-us {
+  margin-bottom: 42px;
+}
+
+.about-us h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.about-us p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 700px;
+}
+
+.showroom-ovens {
+  padding: 6px 0 24px;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  color: #c62a39;
+  background: var(--badge-bg);
+  font-weight: 500;
+}
+
+.showroom-ovens h2 {
+  margin: 0 0 28px;
+  font-size: clamp(2rem, 3.3vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 38px;
+}
+
+.oven-card {
+  background: var(--surface);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.oven-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2.15;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-body h3 {
+  margin: 0 0 6px;
+  font-size: 1.95rem;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+}
+
+.card-body p {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.price {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 1.8rem;
+  font-size: clamp(1rem, 1.4vw, 1.8rem);
+  font-weight: 700;
+  box-shadow: 0 4px 0 #9c1f2d;
+}
+
+@media (max-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  main {
+    padding: 40px 16px 60px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  min-height: 100vh;
+  display: grid;
+  place-items: end stretch;
+  font-family: "Outfit", sans-serif;
+  background: #f6f6f6;
+  color: var(--text);
+}
+
+.footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  border: 3px solid rgba(255, 255, 255, 0.55);
+  border-bottom: 0;
+  background: var(--footer-bg);
+  padding: 40px 36px 16px;
+}
+
+.footer__pattern {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(65px 145px at 11% 73%, transparent 62%, var(--pattern) 65%, transparent 69%),
+    radial-gradient(90px 180px at 22% 80%, transparent 63%, var(--pattern) 66%, transparent 70%),
+    radial-gradient(70px 170px at 43% 77%, transparent 62%, var(--pattern) 65%, transparent 69%),
+    radial-gradient(95px 205px at 57% 84%, transparent 64%, var(--pattern) 66%, transparent 70%),
+    radial-gradient(80px 155px at 69% 75%, transparent 62%, var(--pattern) 65%, transparent 69%),
+    radial-gradient(85px 175px at 83% 79%, transparent 62%, var(--pattern) 65%, transparent 69%),
+    radial-gradient(82px 165px at 97% 82%, transparent 63%, var(--pattern) 66%, transparent 70%);
+}
+
+.footer__brand-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.footer__brand {
+  margin: 0;
+  font-size: clamp(34px, 3vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr;
+  gap: 24px 56px;
+  max-width: 865px;
+  margin: 0 auto;
+}
+
+.footer__column h3,
+.footer__column p {
+  margin: 0;
+  line-height: 1.45;
+  font-size: clamp(22px, 1.38vw, 30px);
+}
+
+.footer__column h3 {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.footer__column p + p {
+  margin-top: 2px;
+}
+
+.footer__nav {
+  margin-top: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(17px, 1vw, 22px);
+}
+
+.footer__nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__nav a:hover {
+  text-decoration: underline;
+}
+
+.footer__divider {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+@media (max-width: 940px) {
+  .footer {
+    padding: 28px 20px 14px;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer__nav {
+    margin-top: 40px;
+    flex-wrap: wrap;
   }
 }
