@@ -550,6 +550,129 @@ p {
 }
 
 
+.stoves {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: #efefef;
+  padding: 62px 48px 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stoves::after {
+  content: "";
+  position: absolute;
+  left: -80px;
+  right: -80px;
+  bottom: -180px;
+  height: 380px;
+  background: radial-gradient(circle at center, rgba(231, 210, 169, 0.33) 0 42%, transparent 72%);
+  pointer-events: none;
+}
+
+.stoves__badge {
+  display: inline-block;
+  background: #e8aa43;
+  color: #b63f24;
+  border-radius: 6px;
+  padding: 4px 14px;
+  font-size: 24px;
+}
+
+.stoves__title {
+  margin: 12px 0 0;
+  font-size: 48px;
+  font-weight: 800;
+  color: #111;
+}
+
+.stoves__grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  position: relative;
+  z-index: 1;
+}
+
+.stove-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f7f7f7;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+}
+
+.stove-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(165deg, #575757, #2a2a2a);
+  border-bottom: 3px solid #dadada;
+  color: #efefef;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.stove-card__content {
+  padding: 16px 14px 14px;
+}
+
+.stove-card__content h4 {
+  margin: 0;
+  font-size: 34px;
+  color: #111;
+}
+
+.stove-card__content p {
+  margin: 8px 0 0;
+  font-size: 35px;
+  line-height: 1.28;
+  color: #222;
+}
+
+.stove-card__price {
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 35px;
+  color: var(--brand);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.stoves__cta {
+  margin-top: 44px;
+}
+
+@media (max-width: 1200px) {
+  .stoves {
+    max-width: none;
+    padding: 30px 20px 40px;
+  }
+
+  .stoves__title {
+    font-size: 42px;
+  }
+
+  .stoves__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  .stove-card__content h4 {
+    font-size: 28px;
+  }
+
+  .stove-card__content p,
+  .stove-card__price {
+    font-size: 24px;
+  }
+}
+
+
 .about {
   max-width: 1120px;
   margin: 0 auto;
