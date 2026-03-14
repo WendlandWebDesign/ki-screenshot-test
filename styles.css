@@ -1,0 +1,253 @@
+:root {
+  --bg: #efefef;
+  --brand: #bb273b;
+  --text: #111111;
+  --muted: #2f2f2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #dedede;
+}
+
+.hero {
+  min-height: 100vh;
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: 24px 48px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  background: radial-gradient(circle at center, rgba(214, 195, 150, 0.32), transparent 70%);
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 520px;
+  height: 300px;
+  left: -80px;
+  bottom: -40px;
+}
+
+.hero::after {
+  width: 620px;
+  height: 420px;
+  right: -100px;
+  bottom: -80px;
+}
+
+.hero__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 42px;
+  font-weight: 500;
+  color: #202020;
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+}
+
+.nav__link {
+  color: #111;
+  text-decoration: none;
+  font-size: 28px;
+  position: relative;
+}
+
+.nav__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  margin: auto;
+  width: 54px;
+  height: 8px;
+  border-bottom: 3px solid var(--brand);
+  border-radius: 50%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 30px;
+  line-height: 1;
+  padding: 16px 28px;
+  font-weight: 700;
+  border: 3px solid transparent;
+}
+
+.btn--primary {
+  color: white;
+  background: var(--brand);
+  box-shadow: 0 4px 0 #8e1e2d;
+}
+
+.btn--ghost {
+  color: var(--brand);
+  background: #f8f8f8;
+  border-color: var(--brand);
+  box-shadow: 0 4px 0 #8e1e2d;
+}
+
+.hero__content {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.badge {
+  width: 130px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f1dc88;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 42px;
+}
+
+.badge span {
+  color: var(--brand);
+}
+
+h1 {
+  margin: 0;
+  color: var(--brand);
+  font-size: 96px;
+  line-height: 1.05;
+}
+
+h2 {
+  margin: 10px 0 0;
+  color: var(--text);
+  font-size: 58px;
+}
+
+p {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 40px;
+}
+
+.hero__actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 24px;
+}
+
+.hero__right {
+  min-height: 610px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.glow {
+  width: 430px;
+  height: 500px;
+  border-radius: 40% 40% 30% 30%;
+  background: radial-gradient(circle at 50% 45%, rgba(255, 185, 70, 0.55), rgba(255, 185, 70, 0.1) 60%, transparent 72%);
+  position: absolute;
+  bottom: 48px;
+}
+
+.stove-placeholder {
+  width: 350px;
+  height: 580px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #4a4a4a, #222);
+  border: 6px solid #1a1a1a;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.stove-placeholder::before {
+  content: "";
+  position: absolute;
+  width: 92px;
+  height: 200px;
+  top: -190px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #383838, #181818);
+  border-radius: 26px 26px 8px 8px;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    min-height: unset;
+    max-width: none;
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav__link {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 22px;
+    padding: 12px 18px;
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 28px;
+  }
+
+  .hero__right {
+    min-height: 540px;
+  }
+}
